@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>らくがきコード</title>
+    <meta name="description"
+        content="「らくがき」するみたいに、プログラミングを。名古屋大学 IdeaStoa を拠点に、AIを駆使した最新のプログラミングスタイル「バイブコーディング」を探究するコミュニティです。">
+    <!-- Google Fonts: Zen Maru Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="らくがきコード.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+    <!-- Splash Screen (ロード時の黄色いカーテン) -->
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-layer layer-1"></div>
+        <div class="splash-layer layer-2"></div>
+        <div class="splash-layer layer-3"></div>
+        <div class="splash-layer layer-4"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#home" class="logo">
+            <img src="らくがきコード.jpg" alt="らくがきコード">
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav" id="nav-menu">
+            <a href="#about-title">らくがきコードとは</a>
+            <a href="#concept">コンセプト</a>
+            <a href="#members">メンバー</a>
+            <a href="#join">メンバーになる</a>
+            <a href="#community">コミュニティ</a>
+        </nav>
+        <div class="header-wave">
+            <svg class="header-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave-header"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax-header">
+                    <use href="#gentle-wave-header" x="48" y="0" fill="rgba(254, 189, 89, 0.3)" />
+                    <use href="#gentle-wave-header" x="48" y="3" fill="rgba(254, 189, 89, 0.5)" />
+                    <use href="#gentle-wave-header" x="48" y="5" fill="rgba(254, 189, 89, 0.7)" />
+                    <use href="#gentle-wave-header" x="48" y="7" fill="#febd59" />
+                </g>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-logo">
+                <img src="らくがきコード.jpg" alt="らくがきコード">
+            </h1>
+            <p class="hero-subtitle">「らくがき」するみたいに、<br class="sp-br">プログラミングを。</p>
+        </div>
+        <div class="wave-bottom">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use href="#gentle-wave" x="48" y="0" fill="rgba(255, 252, 242, 0.7)" />
+                    <use href="#gentle-wave" x="48" y="3" fill="rgba(255, 252, 242, 0.5)" />
+                    <use href="#gentle-wave" x="48" y="5" fill="rgba(255, 252, 242, 0.3)" />
+                    <use href="#gentle-wave" x="48" y="7" fill="#fffcf2" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title" id="about-title">「らくがきコード」とは？</h2>
+            <div class="text-block">
+                <p>名古屋大学 IdeaStoa を拠点に、AIを駆使した最新のプログラミングスタイル「バイブコーディング」を探究するコミュニティです。</p>
+                <p>難しいコードを覚える必要はありません。<br>まるでノートの端に「らくがき」をするように、思いついたアイデアをその場で形にする。<br>メンバー同士や参加者と一緒に学び合いながら、「なんかできた！」というワクワクを共有しています。
+                </p>
+            </div>
+
+            <div class="features">
+                <div class="feature-item">
+                    <h3>勉強会（学び合い）</h3>
+                    <p>「教える人」と「教わる人」の壁はありません。最新ツールの Antigravity
+                        などを実際に触りながら、メンバー全員で知恵を出し合う「学び合い」のスタイルです。今後は、外部からのゲストを招いた勉強会も計画中です。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>イベント</h3>
+                    <p>バイブコーディングの衝撃を体験できるイベントを開催予定！プログラミング未経験でも、AIと一緒に作品を作り上げる楽しさを味わえます。どんなイベントになるか、どうぞお楽しみに。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section class="concept section" id="concept">
+        <div class="container">
+            <h2 class="section-title">コンセプト</h2>
+
+            <div class="concept-item">
+                <h3>創設のきっかけ</h3>
+                <div class="text-block" id="concept-story">
+                    <p>今、AIの進化で世界がどんどん変わっています。プログラミングもそのひとつ。現場ではAIを使ってコードを書くのが当たり前になり、専門家の中には「もう人間がコードを書かなくてもいい時代だ」と言う人までいます。
+                    </p>
+
+                    <div class="hidden-content" id="concept-more">
+                        <p>でも、ふと周りを見渡すと、その「AIを味方につけて何かを作る方法」を知っている人は、まだまだ少ないのが現状です。<br>「誰でも作れる時代になったはずなのに、やり方がわからないから手が出せない」<br>そんなもどかしい状況を変えたくて、らくがきコードは始まりました。
+                        </p>
+                        <p>今の時代、ふだん使っているチャットAIに「こんなの作りたい！」と話しかけるだけで、ホームページもゲームも形にできてしまいます。<br>これまでのプログラミング学習といえば、「この記号を書いて、この文法を覚えて…」といった暗記が中心でした。でも、これからはもっと別のことが大切になるはずです。
+                        </p>
+                        <p class="highlight">私たちは、AI時代に合った、もっと直感的に、もっと「らくがき」みたいに楽しく学べる、新しい教育のカタチを探っていきます。</p>
+                    </div>
+
+                    <button class="btn-read-more" id="read-more-btn">続きを読む ▼</button>
+                </div>
+            </div>
+
+            <div class="concept-item">
+                <h3>コミュニティのこだわり</h3>
+                <div class="text-block">
+                    <p>「一部のメンバーだけで盛り上がっている」場所にはしたくない。<br>だからこそ、誰でも、いつでも、ふらっと参加できる敷居の低さを大切にしています。</p>
+                </div>
+            </div>
+
+            <div class="concept-item">
+                <h3>メンバー構成</h3>
+                <div class="text-block">
+                    <div class="role-list">
+                        <div class="role-item">
+                            <span class="role-badge">めいんちゅ</span>
+                            <span class="role-desc">イベントや勉強会を動かす運営メンバー</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-badge">さぶめんちゅ</span>
+                            <span class="role-desc">勉強会に参加したり、運営を覗いたりするメンバー</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-badge">さぽんちゅ</span>
+                            <span class="role-desc">活動を温かく見守り、支えてくれるサポーター</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="concept-item">
+                <h3>つながるプラットフォーム</h3>
+                <div class="text-block">
+                    <p>公式Discordでは、バイブコーディングの相談から、自作した作品の自慢、イベント運営の裏側まで、すべてがオープンに。「見るだけ」の参加も大歓迎です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="members section" id="members">
+        <div class="container">
+            <h2 class="section-title">めいんちゅ（メインメンバー）紹介</h2>
+            <div class="member-list">
+                <!-- メンバー1 -->
+                <div class="member-row fade-target">
+                    <img src="yossi.png" alt="ヨッしー" class="member-photo">
+                    <div class="member-info">
+                        <h3 class="member-name">ヨッしー（吉木嵩裕）</h3>
+                        <div class="member-title">
+                            <span class="member-badge">代表（めいんちゅ）</span><br>
+                            名古屋大学　情報学部　人間・社会情報学科　学部2年
+                        </div>
+                        <div class="member-desc">
+                            らくがきコードをつくり、運営しています。<br>特技はおいしそうに食べること。
+                        </div>
+                    </div>
+                </div>
+                <!-- メンバー2 -->
+                <div class="member-row">
+                    <div class="member-photo"
+                        style="background-image: url('pakino.png'); background-size: 140%; background-position: center 20%; background-repeat: no-repeat;"
+                        role="img" aria-label="パキノ"></div>
+                    <div class="member-info">
+                        <h3 class="member-name">パキノ（萩野基）</h3>
+                        <div class="member-title">
+                            <span class="member-badge">めいんちゅ</span><br>
+                            名古屋大学　情報学部　人間・社会情報学科　学部2年
+                        </div>
+                        <div class="member-desc">
+                            AIを用いながら、人ならではの良さを模索中。<br>いつもヘッドフォンで音楽聞いてる。
+                        </div>
+                    </div>
+                </div>
+                <!-- メンバー3 -->
+                <div class="member-row">
+                    <img src="mittsu.png" alt="みっつ" class="member-photo">
+                    <div class="member-info">
+                        <h3 class="member-name">みっつ（三津智暁）</h3>
+                        <div class="member-title">
+                            <span class="member-badge">めいんちゅ</span><br>
+                            名古屋大学　経済学部　学部2年
+                        </div>
+                        <div class="member-desc">
+                            生成AIを用いた色々な取組を支援しています。<br>趣味は旅行、月に一回は県外に行くようにしています。
+                        </div>
+                    </div>
+                </div>
+                <!-- メンバー4 -->
+                <div class="member-row">
+                    <img src="habachan.png" alt="はばちゃん" class="member-photo">
+                    <div class="member-info">
+                        <h3 class="member-name">はばちゃん（幅菜摘）</h3>
+                        <div class="member-title">
+                            <span class="member-badge">めいんちゅ</span><br>
+                            名古屋大学　情報学部　人間・社会情報学科　学部2年
+                        </div>
+                        <div class="member-desc">
+                            IdeaStoaという場所で、学生の"やってみたい"をお手伝いしています。<br>ゆるーく議論するのが好きです。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join section" id="join">
+        <div class="container">
+            <h2 class="section-title">めんちゅないず（メンバーになる）</h2>
+            <div class="text-block center-text">
+                <p>あなたも、らくがきコードの仲間（めんちゅ）になりませんか？<br>少しでも興味が湧いたら、まずは以下のフォームから教えてください！</p>
+                <a href="https://forms.gle/ABpbisV6w1tom6k57" target="_blank" rel="noopener noreferrer" class="btn">メンバー登録フォームへ進む</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community section" id="community">
+        <div class="container">
+            <h2 class="section-title">コミュニティ</h2>
+            <div class="text-block center-text">
+                <h3>IdeaStoa「実験」プロジェクトに参画中！</h3>
+                <p>名古屋大学 IdeaStoaの「実験」プロジェクトに参加しています。</p>
+                <a href="https://ideastoa.aip.nagoya-u.ac.jp/jikken/project/project-6292/" target="_blank"
+                    class="btn">プロジェクト詳細をチェックする</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2 class="section-title">公式SNS</h2>
+        <div class="footer-sns" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+            <!-- Linktree Icon -->
+            <a href="https://linktr.ee/rakugaki_code?utm_source=qr_code" target="_blank" aria-label="Linktree"
+                style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; background-color: var(--main-yellow); color: var(--text-white); transition: opacity 0.3s, transform 0.3s;"
+                onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24"
+                    height="24">
+                    <title>Linktree</title>
+                    <path
+                        d="M13.736 5.853l4.005-4.117 2.325 2.38-4.2 4.005h5.908v3.305h-5.937l4.229 4.108-2.325 2.334-5.74-5.769v11.66h-3.266V11.82l-5.769 5.827-2.325-2.325 4.229-4.117H-1.23v-3.305h5.937L.507 4.116l2.325-2.38 4.005 4.117V0h3.266v5.853z" />
+                </svg>
+            </a>
+            <!-- 今後ここにインスタなどのアイコンを追加できます -->
+        </div>
+        <p>&copy; 2026 らくがきコード.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
