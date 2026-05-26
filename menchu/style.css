@@ -1,0 +1,9 @@
+.subpage-main {
+    padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+    .subpage-main {
+        padding-top: 96px;
+    }
+}

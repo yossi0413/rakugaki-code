@@ -68,7 +68,7 @@ strong {
 }
 
 #about {
-    padding-top: 450px; /* 波が遅れて降りてきても被らないよう余裕を持たせる（JS側で最大350pxに制限するため絶対に被りません） */
+    padding-top: 100px;
 }
 
 #about-title {
@@ -227,6 +227,7 @@ strong {
 .nav {
     display: flex;
     gap: 30px;
+    margin-right: 28px;
 }
 
 .nav a {
@@ -597,11 +598,59 @@ strong {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+.event-link-box {
+    margin-top: 56px;
+    text-align: center;
+}
+
+.event-link-box p {
+    margin-bottom: 22px;
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.event-promo {
+    padding-top: 450px;
+    padding-bottom: 10px;
+}
+
+.event-promo-box {
+    padding: 44px 34px;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 8px 26px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.event-promo-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #e59d29;
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+.event-promo-box h2 {
+    margin-bottom: 18px;
+    color: var(--text-dark);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.event-promo-box p:not(.event-promo-label) {
+    margin-bottom: 28px;
+    color: var(--text-dark);
+    font-size: 1.05rem;
+}
+
 .axis-diagram {
     position: relative;
     max-width: 920px;
     min-height: 520px;
-    margin: 40px auto 0;
+    margin: 76px auto 0;
 }
 
 .axis-shape {
@@ -913,6 +962,7 @@ strong {
 
     .hamburger {
         display: flex;
+        margin-right: 12px;
     }
 
     .nav {
@@ -943,7 +993,12 @@ strong {
     }
 
     #about {
-        padding-top: 250px; /* スマホでは波の移動量が少ないため余白も縮小 */
+        padding-top: 60px;
+    }
+
+    .event-promo {
+        padding-top: 250px;
+        padding-bottom: 20px;
     }
 
     .section-title {
