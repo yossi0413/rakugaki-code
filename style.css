@@ -467,12 +467,213 @@ strong {
 
 .features {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
     margin-top: 60px;
 }
 
+.activity-slider {
+    position: relative;
+    max-width: 760px;
+    margin: 54px auto 0;
+    padding: 0 72px 44px;
+}
+
+.activity-viewport {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.activity-track {
+    display: flex;
+    transition: transform 0.55s ease;
+}
+
+.activity-slide {
+    flex: 0 0 100%;
+    min-height: 260px;
+    padding: 46px 54px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 20px;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.06);
+}
+
+.activity-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--main-yellow);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.activity-slide h3 {
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-size: 1.8rem;
+}
+
+.activity-slide p {
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+.activity-nav {
+    position: absolute;
+    top: 118px;
+    z-index: 3;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--main-yellow);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.activity-nav:hover {
+    background-color: #e59d29;
+    transform: translateY(-2px);
+}
+
+.activity-prev {
+    left: 0;
+}
+
+.activity-next {
+    right: 0;
+}
+
+.activity-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.activity-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.16);
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.activity-dot.is-active {
+    background-color: var(--main-yellow);
+    transform: scale(1.25);
+}
+
+.activity-photo {
+    max-width: 920px;
+    margin: 70px auto 0;
+    text-align: center;
+}
+
+.activity-photo h3 {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--main-yellow);
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+.activity-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.axis-diagram {
+    position: relative;
+    max-width: 920px;
+    min-height: 520px;
+    margin: 40px auto 0;
+}
+
+.axis-shape {
+    position: absolute;
+    inset: 0 120px 46px;
+    width: calc(100% - 240px);
+    height: calc(100% - 46px);
+    overflow: visible;
+}
+
+.axis-shape polygon {
+    fill: rgba(254, 189, 89, 0.08);
+    stroke: rgba(254, 189, 89, 0.75);
+    stroke-width: 8;
+    stroke-linejoin: round;
+}
+
+.axis-shape circle {
+    fill: var(--main-yellow);
+    stroke: #fff;
+    stroke-width: 5;
+}
+
+.axis-node {
+    position: absolute;
+    z-index: 2;
+    width: 260px;
+    min-height: 170px;
+    padding: 26px 24px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.axis-node h3 {
+    margin-bottom: 14px;
+    color: var(--text-dark);
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+.axis-node h3 span {
+    color: var(--main-yellow);
+    font-size: 1.5rem;
+}
+
+.axis-node p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    text-align: left;
+}
+
+.axis-node-vibe {
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.axis-node-think {
+    bottom: 0;
+    left: 0;
+}
+
+.axis-node-share {
+    right: 0;
+    bottom: 0;
+}
+
 .feature-item {
+    min-width: 0;
     background-color: #fff;
     padding: 40px 30px;
     border-radius: 20px;
@@ -516,6 +717,18 @@ strong {
     font-size: 1.1rem;
     margin-bottom: 10px;
     color: #e59d29;
+}
+
+#concept-story h4 {
+    margin-top: 34px;
+    margin-bottom: 14px;
+    color: #e59d29;
+    font-size: 1.18rem;
+    line-height: 1.6;
+}
+
+#concept-story h4:first-child {
+    margin-top: 0;
 }
 
 .sub-block ul {
@@ -740,6 +953,58 @@ strong {
 
     .features {
         grid-template-columns: 1fr;
+    }
+
+    .activity-slider {
+        padding: 0 0 42px;
+    }
+
+    .activity-slide {
+        min-height: 300px;
+        padding: 34px 28px;
+    }
+
+    .activity-slide h3 {
+        font-size: 1.5rem;
+    }
+
+    .activity-slide p {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    .activity-nav {
+        top: auto;
+        bottom: -4px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.6rem;
+    }
+
+    .activity-prev {
+        left: 18px;
+    }
+
+    .activity-next {
+        right: 18px;
+    }
+
+    .axis-diagram {
+        min-height: 0;
+        margin-top: 40px;
+        display: grid;
+        gap: 24px;
+    }
+
+    .axis-shape {
+        display: none;
+    }
+
+    .axis-node {
+        position: static;
+        width: auto;
+        min-height: 0;
+        transform: none;
     }
 
     .role-item {
