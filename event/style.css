@@ -119,6 +119,25 @@
     padding: 110px 0 70px;
 }
 
+.flyer-section {
+    padding: 90px 0 20px;
+    background: var(--cream);
+    text-align: center;
+}
+
+.flyer-image {
+    width: min(560px, 100%);
+    margin: 38px auto 0;
+}
+
+.flyer-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
 .event-section h2 {
     margin-bottom: 42px;
     color: var(--text-dark);
@@ -316,6 +335,14 @@
 
     .event-section {
         padding: 80px 0 52px;
+    }
+
+    .flyer-section {
+        padding: 70px 0 12px;
+    }
+
+    .flyer-image {
+        margin-top: 28px;
     }
 
     .info-list > div {
