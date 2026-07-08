@@ -47,8 +47,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const activitySlider = document.querySelector('.activity-slider');
+    if (activitySlider) {
+        const track = activitySlider.querySelector('.activity-track');
+        const slides = Array.from(activitySlider.querySelectorAll('.activity-slide'));
+        const dots = Array.from(activitySlider.querySelectorAll('.activity-dot'));
+        const prevBtn = activitySlider.querySelector('.activity-prev');
+        const nextBtn = activitySlider.querySelector('.activity-next');
+        let currentIndex = 0;
+        let slideTimer;
+
+        const showActivity = (index) => {
+            currentIndex = (index + slides.length) % slides.length;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            slides.forEach((slide, slideIndex) => {
+                slide.classList.toggle('is-active', slideIndex === currentIndex);
+            });
+            dots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('is-active', dotIndex === currentIndex);
+            });
+        };
+
+        const startActivityAutoPlay = () => {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(() => {
+                showActivity(currentIndex + 1);
+            }, 4500);
+        };
+
+        prevBtn.addEventListener('click', () => {
+            showActivity(currentIndex - 1);
+            startActivityAutoPlay();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            showActivity(currentIndex + 1);
+            startActivityAutoPlay();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showActivity(index);
+                startActivityAutoPlay();
+            });
+        });
+
+        activitySlider.addEventListener('mouseenter', () => clearInterval(slideTimer));
+        activitySlider.addEventListener('mouseleave', startActivityAutoPlay);
+        showActivity(0);
+        startActivityAutoPlay();
+    }
+
     // Scroll Fade-in Animation
-    const fadeElements = document.querySelectorAll('.section-title, .text-block, .feature-item, .member-row');
+    const fadeElements = document.querySelectorAll('.section-title, .text-block, .feature-item, .activity-slider, .member-row');
     
     const observerOptions = {
         root: null,

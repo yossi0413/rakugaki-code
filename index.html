@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>らくがきコード</title>
     <meta name="description"
-        content="「らくがき」するみたいに、プログラミングを。名古屋大学 IdeaStoa を拠点に、AIを駆使した最新のプログラミングスタイル「バイブコーディング」を探究するコミュニティです。">
+        content="「らくがき」するみたいに、AIとプログラミングを楽しむ。らくがきコードは、手を動かし、問い直し、学び合いながら、AI時代の新しい創作と学びのかたちを探るコミュニティです。">
     <!-- Google Fonts: Zen Maru Gothic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <!-- Favicon -->
-    <link rel="icon" href="らくがきコード.jpg" type="image/jpeg">
+    <link rel="icon" href="images/らくがきコード.jpg" type="image/jpeg">
 </head>
 
 <body>
@@ -30,19 +30,17 @@
     <!-- Header -->
     <header class="header">
         <a href="#home" class="logo">
-            <img src="らくがきコード.jpg" alt="らくがきコード">
+            <img src="images/らくがきコード.jpg" alt="らくがきコード">
         </a>
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="メニューを開く">
             <span></span>
             <span></span>
             <span></span>
         </div>
         <nav class="nav" id="nav-menu">
-            <a href="#about-title">らくがきコードとは</a>
-            <a href="#concept">コンセプト</a>
-            <a href="#members">メンバー</a>
-            <a href="#join">メンバーになる</a>
-            <a href="#community">コミュニティ</a>
+            <a href="concept/">コンセプト</a>
+            <a href="menchu/">私たちについて</a>
+            <a href="event/">イベント</a>
         </nav>
         <div class="header-wave">
             <svg class="header-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -65,7 +63,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1 class="hero-logo">
-                <img src="らくがきコード.jpg" alt="らくがきコード">
+                <img src="images/らくがきコード.jpg" alt="らくがきコード">
             </h1>
             <p class="hero-subtitle">「らくがき」するみたいに、<br class="sp-br">プログラミングを。</p>
         </div>
@@ -89,173 +87,106 @@
     <!-- About Section -->
     <section class="about section" id="about">
         <div class="container">
-            <h2 class="section-title" id="about-title">「らくがきコード」とは？</h2>
+            <h2 class="section-title" id="about-title">「らくがきコード」<br class="sp-br">とは？</h2>
             <div class="text-block">
-                <p>名古屋大学 IdeaStoa を拠点に、AIを駆使した最新のプログラミングスタイル「バイブコーディング」を探究するコミュニティです。</p>
-                <p>難しいコードを覚える必要はありません。<br>まるでノートの端に「らくがき」をするように、思いついたアイデアをその場で形にする。<br>メンバー同士や参加者と一緒に学び合いながら、「なんかできた！」というワクワクを共有しています。
+                <p>らくがきコードは、AIと一緒にアイデアを形にする「バイブコーディング」を、実践しながら学び合うコミュニティです。</p>
+                <p>難しい文法を完璧に覚えてから始めるのではなく、まずは手を動かしてみる。<br>ノートの端にらくがきをするような気軽さで、思いついたものをつくり、できたものを見直し、気づきを共有していきます。
                 </p>
+                <p>私たちの活動は、Vibe・Think・Share の3つが支え合う三角形の関係で成り立っています。</p>
             </div>
 
-            <div class="features">
-                <div class="feature-item">
-                    <h3>勉強会（学び合い）</h3>
-                    <p>「教える人」と「教わる人」の壁はありません。最新ツールの Antigravity
-                        などを実際に触りながら、メンバー全員で知恵を出し合う「学び合い」のスタイルです。今後は、外部からのゲストを招いた勉強会も計画中です。</p>
+            <div class="axis-diagram" aria-label="Vibe、Think、Shareの三角形">
+                <svg class="axis-shape" viewBox="0 0 620 440" role="img" aria-hidden="true">
+                    <polygon points="310,42 92,350 528,350" />
+                    <circle cx="310" cy="42" r="10" />
+                    <circle cx="92" cy="350" r="8" />
+                    <circle cx="528" cy="350" r="8" />
+                </svg>
+                <div class="axis-node axis-node-vibe">
+                    <h3>手を動かす<br><span>Vibe</span></h3>
+                    <p>まずはつくってみる。AIツールを触りながら、アイデアを小さく試し、動くものにしていきます。</p>
                 </div>
-                <div class="feature-item">
-                    <h3>イベント</h3>
-                    <p>バイブコーディングの衝撃を体験できるイベントを開催予定！プログラミング未経験でも、AIと一緒に作品を作り上げる楽しさを味わえます。どんなイベントになるか、どうぞお楽しみに。</p>
+                <div class="axis-node axis-node-think">
+                    <h3>問い直す<br><span>Think</span></h3>
+                    <p>つくって終わりにしない。正しさ、楽しさ、安全性、使い方をみんなで考えます。</p>
+                </div>
+                <div class="axis-node axis-node-share">
+                    <h3>学び合う<br><span>Share</span></h3>
+                    <p>作品、気づき、失敗談を持ち寄り、「わからない」も「できた」も共有します。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Concept Section -->
-    <section class="concept section" id="concept">
+    <!-- Vibe Coding Section -->
+    <section class="vibecoding section" id="vibecoding">
         <div class="container">
-            <h2 class="section-title">コンセプト</h2>
-
-            <div class="concept-item">
-                <h3>創設のきっかけ</h3>
-                <div class="text-block" id="concept-story">
-                    <p>今、AIの進化で世界がどんどん変わっています。プログラミングもそのひとつ。現場ではAIを使ってコードを書くのが当たり前になり、専門家の中には「もう人間がコードを書かなくてもいい時代だ」と言う人までいます。
-                    </p>
-
-                    <div class="hidden-content" id="concept-more">
-                        <p>でも、ふと周りを見渡すと、その「AIを味方につけて何かを作る方法」を知っている人は、まだまだ少ないのが現状です。<br>「誰でも作れる時代になったはずなのに、やり方がわからないから手が出せない」<br>そんなもどかしい状況を変えたくて、らくがきコードは始まりました。
-                        </p>
-                        <p>今の時代、ふだん使っているチャットAIに「こんなの作りたい！」と話しかけるだけで、ホームページもゲームも形にできてしまいます。<br>これまでのプログラミング学習といえば、「この記号を書いて、この文法を覚えて…」といった暗記が中心でした。でも、これからはもっと別のことが大切になるはずです。
-                        </p>
-                        <p class="highlight">私たちは、AI時代に合った、もっと直感的に、もっと「らくがき」みたいに楽しく学べる、新しい教育のカタチを探っていきます。</p>
-                    </div>
-
-                    <button class="btn-read-more" id="read-more-btn">続きを読む ▼</button>
-                </div>
-            </div>
-
-            <div class="concept-item">
-                <h3>コミュニティのこだわり</h3>
-                <div class="text-block">
-                    <p>「一部のメンバーだけで盛り上がっている」場所にはしたくない。<br>だからこそ、誰でも、いつでも、ふらっと参加できる敷居の低さを大切にしています。</p>
-                </div>
-            </div>
-
-            <div class="concept-item">
-                <h3>メンバー構成</h3>
-                <div class="text-block">
-                    <div class="role-list">
-                        <div class="role-item">
-                            <span class="role-badge">めいんちゅ</span>
-                            <span class="role-desc">イベントや勉強会を動かす運営メンバー</span>
-                        </div>
-                        <div class="role-item">
-                            <span class="role-badge">さぶめんちゅ</span>
-                            <span class="role-desc">勉強会に継続的に参加したり、運営を覗いたりして、らくがきコードのコミュニティーに参加するメンバー</span>
-                        </div>
-                        <div class="role-item">
-                            <span class="role-badge">さぽんちゅ</span>
-                            <span class="role-desc">活動を温かく見守り、支えてくれるサポーター。講師の方や有識者の方など。</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="concept-item">
-                <h3>つながるプラットフォーム</h3>
-                <div class="text-block">
-                    <p>公式Discordでは、バイブコーディングの相談から、自作した作品の自慢、イベント運営の裏側まで、すべてがオープンに。気軽に参加できます。</p>
-                </div>
+            <h2 class="section-title">「バイブコーディング」とは？</h2>
+            <div class="text-block">
+                <p>バイブコーディングは、AIに「こんな感じで動かしたい」と言葉で伝えながら、アプリやWebサイト、ゲームなどをつくっていく新しい制作スタイルです。</p>
+                <p>大切なのは、コードを一文字ずつ正確に書くことだけではありません。何をつくりたいのかを考え、AIの提案を試し、動きを見て、また直す。その往復の中で、自分のアイデアをだんだん形にしていきます。</p>
             </div>
         </div>
     </section>
 
-    <!-- Members Section -->
-    <section class="members section" id="members">
+    <!-- Activities Section -->
+    <section class="activities section" id="activities">
         <div class="container">
-            <h2 class="section-title">めいんちゅ（メインメンバー）紹介</h2>
-            <div class="member-list">
-                <!-- メンバー1 -->
-                <div class="member-row fade-target">
-                    <img src="yossi.png" alt="ヨッしー" class="member-photo">
-                    <div class="member-info">
-                        <h3 class="member-name">ヨッしー（吉木嵩裕）</h3>
-                        <div class="member-title">
-                            <span class="member-badge">代表（めいんちゅ）</span><br>
-                            名古屋大学　情報学部　人間・社会情報学科　学部2年
-                        </div>
-                        <div class="member-desc">
-                            らくがきコードをつくり、運営しています。<br>特技はおいしそうに食べること。
-                        </div>
+            <h2 class="section-title">活動内容</h2>
+            <div class="text-block">
+                <p>らくがきコードでは、バイブコーディングを「知る」「学ぶ」「つくる」ための活動を、イベント・勉強会・制作広場の3つに分けて行っています。</p>
+            </div>
+
+            <div class="activity-slider" aria-label="活動内容スライドショー">
+                <button class="activity-nav activity-prev" type="button" aria-label="前の活動">‹</button>
+                <div class="activity-viewport">
+                    <div class="activity-track">
+                        <article class="activity-slide is-active">
+                            <span class="activity-label">Workshop</span>
+                            <h3>イベント</h3>
+                            <p>バイブコーディングを触ったことがない人に向けて、体験型のワークショップを開催します。実際にAIツールを使いながら、アイデアが形になっていく楽しさを知ってもらう入口です。</p>
+                        </article>
+                        <article class="activity-slide">
+                            <span class="activity-label">Study</span>
+                            <h3>勉強会</h3>
+                            <p>バイブコーディングに必要なスキルや、安全性、活用法について学び合います。ツールの使い方だけでなく、AIとどう向き合い、どう使いこなすかを一緒に考えながら進めます。</p>
+                        </article>
+                        <article class="activity-slide">
+                            <span class="activity-label">Create</span>
+                            <h3>制作広場</h3>
+                            <p>各自が自由に作品をつくってみる場です。できたものはDiscordなどのコミュニティプラットフォームで共有できます。外部の方と連携しながら制作する機会もつくっていきます。</p>
+                        </article>
                     </div>
                 </div>
-                <!-- メンバー2 -->
-                <div class="member-row">
-                    <div class="member-photo"
-                        style="background-image: url('pakino.png'); background-size: 140%; background-position: center 20%; background-repeat: no-repeat;"
-                        role="img" aria-label="パキノ"></div>
-                    <div class="member-info">
-                        <h3 class="member-name">パキノ（萩野基）</h3>
-                        <div class="member-title">
-                            <span class="member-badge">めいんちゅ</span><br>
-                            名古屋大学　情報学部　人間・社会情報学科　学部2年
-                        </div>
-                        <div class="member-desc">
-                            AIを用いながら、人ならではの良さを模索中。<br>いつもヘッドフォンで音楽聞いてる。
-                        </div>
-                    </div>
+                <button class="activity-nav activity-next" type="button" aria-label="次の活動">›</button>
+                <div class="activity-dots" aria-label="活動内容の切り替え">
+                    <button class="activity-dot is-active" type="button" aria-label="イベントを表示"></button>
+                    <button class="activity-dot" type="button" aria-label="勉強会を表示"></button>
+                    <button class="activity-dot" type="button" aria-label="制作広場を表示"></button>
                 </div>
-                <!-- メンバー3 -->
-                <div class="member-row">
-                    <img src="mittsu.png" alt="みっつ" class="member-photo">
-                    <div class="member-info">
-                        <h3 class="member-name">みっつ（三津知暁）</h3>
-                        <div class="member-title">
-                            <span class="member-badge">めいんちゅ</span><br>
-                            名古屋大学　経済学部　学部2年
-                        </div>
-                        <div class="member-desc">
-                            生成AIを用いた色々な取組を支援しています。<br>趣味は旅行、月に一回は県外に行くようにしています。
-                        </div>
-                    </div>
-                </div>
-                <!-- メンバー4 -->
-                <div class="member-row">
-                    <img src="habachan.png" alt="はばちゃん" class="member-photo">
-                    <div class="member-info">
-                        <h3 class="member-name">はばちゃん（幅菜摘）</h3>
-                        <div class="member-title">
-                            <span class="member-badge">めいんちゅ</span><br>
-                            名古屋大学　情報学部　人間・社会情報学科　学部2年
-                        </div>
-                        <div class="member-desc">
-                            IdeaStoaという場所で、学生の"やってみたい"をお手伝いしています。<br>ゆるーく議論するのが好きです。
-                        </div>
-                    </div>
+            </div>
+
+            <div class="activity-photo">
+                <h3>活動の様子</h3>
+                <img src="images/meeting.jpg" alt="らくがきコードの活動の様子">
+            </div>
+
+            <div class="event-link-box">
+                <p>らくがきコードの考え方や、運営めんちゅについて知りたい方はこちら！</p>
+                <div class="event-link-actions">
+                    <a href="concept/" class="btn">コンセプトを見る</a>
+                    <a href="menchu/" class="btn">私たちについて見る</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Join Section -->
     <section class="join section" id="join">
         <div class="container">
-            <h2 class="section-title">めんちゅないず（メンバーになる）</h2>
+            <h2 class="section-title">めんちゅないずする</h2>
             <div class="text-block center-text">
-                <p>あなたも、らくがきコードの仲間（めんちゅ）になりませんか？<br>少しでも興味が湧いたら、まずは以下のフォームから教えてください！</p>
+                <p>あなたも、らくがきコードの仲間（めんちゅ）になりませんか？<br>AIで何かをつくってみたい、誰かの試行錯誤を見てみたい。そんな小さな興味から参加できます。</p>
                 <a href="https://forms.gle/ABpbisV6w1tom6k57" target="_blank" rel="noopener noreferrer" class="btn">メンバー登録フォームへ進む</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Section -->
-    <section class="community section" id="community">
-        <div class="container">
-            <h2 class="section-title">コミュニティ</h2>
-            <div class="text-block center-text">
-                <h3>IdeaStoa「実験」プロジェクトに参画中！</h3>
-                <p>名古屋大学 IdeaStoaの「実験」プロジェクトに参加しています。</p>
-                <a href="https://ideastoa.aip.nagoya-u.ac.jp/jikken/project/project-6292/" target="_blank"
-                    class="btn">プロジェクト詳細をチェックする</a>
             </div>
         </div>
     </section>
